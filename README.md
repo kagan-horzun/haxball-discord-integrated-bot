@@ -130,3 +130,7 @@ All legal or ethical issues are the responsibility of the user.
 ---
 
 🎉 **Also thanks to @Wazarr94 for the infrastructure** (https://github.com/Wazarr94)
+
+---
+
+![1]([https://i.imgur.com/example.png](https://media.discordapp.net/attachments/1334502991629258762/1334503001569759273/image.png?ex=679cc445&is=679b72c5&hm=d1ee9b9cfb5c2bcadc9a7acbdf7f4c1a66af83ab3594b5f79a18d9c80ca12d1e&=&format=webp&quality=lossless&width=625&height=577))
