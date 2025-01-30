@@ -132,6 +132,3 @@ All legal or ethical issues are the responsibility of the user.
 🎉 **Also thanks to @Wazarr94 for the infrastructure** (https://github.com/Wazarr94)
 
 ---
-
-[![Game Record](https://i.postimg.cc/rmfMbPx4/image.webp)](https://postimg.cc/340s09Lr)
-
