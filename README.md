@@ -114,7 +114,7 @@ All legal or ethical issues are the responsibility of the user.
 
 **Ranking System:**
 
-- **0 - 500 Points** → 🟥  **Heavy Beginner**
+- **0 - 500 Points** → 🟥  **Rookie**
 - **501 - 1000 Points** → 🟧  **Beginner**
 - **1001 - 2000 Points** → 🟨  **Intermediate**
 - **2001 - 5000 Points** → 🟩  **Pro**
