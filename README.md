@@ -3,7 +3,6 @@
 - There is only a **Turkish** version for now. An English version will be added.
 
 🎉 **Developer**  
-- Discord: `kgn.official`  
 - Version: `1.17`
 - Our Discord Server: `https://discord.gg/brTyQyPAzB`
 
