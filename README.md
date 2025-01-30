@@ -30,18 +30,6 @@ If the person trying to match the Haxball account with the Discord account is th
 
 ---
 
-## 📜 **Disclaimer**
-
-This software is provided **"as is"** without any warranty.  
-The developers are **not responsible** for any **direct or indirect damages**, **data loss**, **service interruptions**, or actions by third parties arising from the use of this software.  
-
-By using this software, the user **accepts all responsibility** and **releases the developers from any legal and financial liabilities**.  
-
-This project is open-source, and its usage is completely at the **user's own risk**.  
-All legal or ethical issues are the responsibility of the user.
-
----
-
 ## ⚙️ **Setup and Usage**
 
 1. Clone this repository:
