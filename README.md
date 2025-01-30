@@ -4,6 +4,8 @@
 
 🎉 **About**  
 - Version: `1.17`
+  
+- Need help? You can come to our Discord server.
 - Our Discord Server: `https://discord.gg/brTyQyPAzB`
 
 🎉 **Project Purpose**  
