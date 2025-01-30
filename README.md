@@ -50,7 +50,11 @@ All legal or ethical issues are the responsibility of the user.
 
 3. Install the necessary dependencies:
     ```bash
-    npm install
+    npm install haxball.js
+    npm install node-localstorage
+    npm install discord.js
+    npm install fs
+    npm install path
     ```
 
 4. Make the configuration as in the content of the main.js file.
