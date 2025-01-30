@@ -2,7 +2,7 @@
 
 - There is only a **Turkish** version for now. An English version will be added.
 
-🎉 **Developer**  
+🎉 **About**  
 - Version: `1.17`
 - Our Discord Server: `https://discord.gg/brTyQyPAzB`
 
