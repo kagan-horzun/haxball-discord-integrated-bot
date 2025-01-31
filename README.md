@@ -108,11 +108,11 @@ This project is designed to assist **people with no coding knowledge** who want 
 
 **Ranking System:**
 
-- **0 - 500 Points** → 🟥  **Rookie**
-- **501 - 1000 Points** → 🟧  **Beginner**
-- **1001 - 2000 Points** → 🟨  **Intermediate**
-- **2001 - 5000 Points** → 🟩  **Pro**
-- **5001+ Points** → 🟦  **HP (Hard Pro)**
+- **0 - 500 Points** → **Rookie**
+- **501 - 1000 Points** → **Beginner**
+- **1001 - 2000 Points** → **Intermediate**
+- **2001 - 5000 Points** → **Pro**
+- **5001+ Points** → **HP**
 - **Unranked** → **Unranked**
 
 ---
