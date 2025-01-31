@@ -4358,7 +4358,6 @@ client.on('interactionCreate', async (interaction) => {
                     // Nesneyi JSON string'e dönüştürerek kaydet
                     LocalDiscordProfilesStorage.setItem(discordId, JSON.stringify(profile));
                     await interaction.reply(`\`\`\`Haxball ve Discord hesabınız eşleştirildi. Haxball Nickiniz: ${nick}\`\`\``);
-                    await interaction.member.setNickname(nick)
             } else {
                 // Eğer oyuncu kaydedilmemişse
                 await interaction.reply('```Bu hesap kaydedilmemiş. Lütfen önce kayıt olun.```');
