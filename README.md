@@ -11,9 +11,6 @@
 🎉 **Project Purpose**  
 This project is designed to assist **people with no coding knowledge** who want to **create and manage a HaxBall room with many different options**. Additionally, with **Discord integration**, users can **intervene in room management via Discord**, controlling the room with various commands.
 
-🎉 **Known bugs**
-If the person trying to match the Haxball account with the Discord account is the server owner, the bot shuts down. This is a one-time event. After restarting the bot you will have no problems.
-
 ---
 
 ## 🚀 **Key Features**
