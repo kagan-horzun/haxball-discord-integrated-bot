@@ -1,6 +1,7 @@
 # HAXBALL DISCORD INTEGRATED ADVANCED BOT
 
-- There is only a **Turkish** version for now. An English version will be added.
+- There is only a **Turkish** version for now. If you want to contribute by translating the project into your own language, contact me.
+- If you want to translate the project yourself, I recommend using DeepL (https://www.deepl.com).
 
 🎉 **About**  
 - Version: `1.17`
@@ -57,10 +58,8 @@ This project is designed to assist **people with no coding knowledge** who want 
 ---
 
 ## 📝 **Discord Commands**
-- **ENGLISH**
-    - To be added
 
-- **TURKISH**
+- **COMMANDS IN TURKISH** (English version is not avaible for now)
 
 - **`/mesajgönder`**  
   - Sends a message to the room.  
