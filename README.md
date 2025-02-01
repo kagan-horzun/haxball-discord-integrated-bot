@@ -4,7 +4,7 @@
 - If you want to translate the project yourself, I recommend using DeepL (https://www.deepl.com).
 
 🎉 **About**  
-- Version: `1.17`
+- Version: `1.18`
   
 - Need help? You can come to our Discord server.
 - Our Discord Server: `https://discord.gg/brTyQyPAzB`
