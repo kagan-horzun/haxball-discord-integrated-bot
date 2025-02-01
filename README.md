@@ -29,9 +29,9 @@ This project is designed to assist **people with no coding knowledge** who want 
 
 ## ⚙️ **Setup and Usage**
 
-1. Clone this repository:
+1. Clone this repository (or download it):
     ```bash
-    git clone https://github.com/username/repository-name.git
+    git clone https://github.com/kgn-h/haxball-discord-integrated-bot.git
     ```
 
 2. Install node.js from here: https://nodejs.org/en
