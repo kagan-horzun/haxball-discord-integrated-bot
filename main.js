@@ -1,7 +1,6 @@
 /* █████████████████████████ 𝗛𝗔𝗫𝗕𝗔𝗟𝗟 𝗗𝗜𝗦𝗖𝗢𝗥𝗗 𝗘𝗡𝗧𝗘𝗚𝗥𝗘𝗟𝗜 𝗚𝗘𝗟𝗜𝗦𝗠𝗜𝗦 𝗕𝗢𝗧 █████████████████████████
 
 🎉 ABOUT DEVELOPER
-
  - Discord: kgn.official
  - Github: kgn-h
  - Version: 1.18
