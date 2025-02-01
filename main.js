@@ -1,163 +1,133 @@
-/*
-████████████████████████████████████████████████████████████████████████
-                𝗛𝗔𝗫𝗕𝗔𝗟𝗟 𝗗𝗜𝗦𝗖𝗢𝗥𝗗 𝗘𝗡𝗧𝗘𝗚𝗥𝗘𝗟𝗜 𝗚𝗘𝗟𝗜𝗦𝗠𝗜𝗦 𝗕𝗢𝗧
-████████████████████████████████████████████████████████████████████████
+/* █████████████████████████ 𝗛𝗔𝗫𝗕𝗔𝗟𝗟 𝗗𝗜𝗦𝗖𝗢𝗥𝗗 𝗘𝗡𝗧𝗘𝗚𝗥𝗘𝗟𝗜 𝗚𝗘𝗟𝗜𝗦𝗠𝗜𝗦 𝗕𝗢𝗧 █████████████████████████
 
-🎉 𝗚𝗲𝗹𝗶𝘀𝘁𝗶𝗿𝗶𝗰𝗶 
+🎉 ABOUT DEVELOPER
+
  - Discord: kgn.official
- - Version: 1.17
+ - Github: kgn-h
+ - Version: 1.18
 
-🎉 Bu proje, kodlama bilgisi olmayan ancak birçok farklı seçenekle HaxBall odası oluşturmak ve yönetmek isteyen kişilere yardımcı olmak amacıyla hazırlanmıştır. 
-Ayrıca, Discord entegrasyonu sayesinde kullanıcılar, oda yönetimine Discord üzerinden müdahale edebilir, çeşitli komutlarla odayı kontrol edebilir. 
+// ████████████████████████████████████████████████████████████████████████████████████████████
 
-🚀 𝗢𝗡𝗘 𝗖𝗜𝗞𝗔𝗡 𝗢𝗭𝗘𝗟𝗟𝗜𝗞𝗟𝗘𝗥
+TURKISH: Bu proje Türkçe olarak hazırlanmıştır. Eğer projeyi kendi dilinize çevirerek katkıda bulunmak istiyorsanız Discord üzerinden benimle iletişime geçin: kgn.official
 
- -  Gelişmiş İstatistik Sistemi
- -  Discord Entegrasyonu (Discord üzerinden oda yönetimi)
- -  Takım İçi ve Oyuncu İçi Sohbet
- -  Şut Hızı ile Beraber Gol Bildirimi
- -  Otomatik Oyun Kaydı
- -  Admin ve Ban Sistemi
- -  Discord Üzerinden Admin Çağrı Sistemi
- -  Rank Sistemi
-  - Ve daha fazlası!
+ENGLISH: This project was prepared in Turkish. If you want to contribute by translating the project into your own language, contact me via Discord: kgn.official
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// ████████████████████████████████████████████████████████████████████████████████████████████*/
 
-📜 𝗦𝗢𝗥𝗨𝗠𝗟𝗨𝗟𝗨𝗞 𝗥𝗘𝗗𝗗𝗜 (𝗗𝗜𝗦𝗖𝗟𝗔𝗜𝗠𝗘𝗥)
+const DİSCORD_BOT_TOKEN = ""// DİSCORD BOT TOKENİNİZ (Kimseyle paylaşmayın)
+const token = "" // HAXBALL ODA TOKENİNİZİ BURADAN ALABİLİRSİNİZ => https://www.haxball.com/headlesstoken 
 
----
+/* DİSCORD BOTUNUZU AYARLARKEN DİKKAT EDECEKLERİNİZ
 
-TURKİSH
+- Botunuza Discord'da verdiğiniz rol, rol listesinde en yukarıda olmalıdır ve tüm yetkiler verilmelidir.
+- "Privileged Gateway Intents" ayarlarının tamamı aktif hale getirilmelidir.
+- Bot davet edilirken "OAuth2" üzerinden "scopes" ayarlarından "application.commands" ve "bot" seçilmeli ve botun "Admin yetkisi" olması sağlanmalıdır.
 
-Bu yazılım, "olduğu gibi" sunulmaktadır ve herhangi bir garanti içermez. 
-Geliştiriciler, bu yazılımın kullanımından doğabilecek doğrudan veya dolaylı 
-zararlardan, veri kaybından, hizmet kesintilerinden veya üçüncü tarafların 
-eylemlerinden hiçbir şekilde sorumlu tutulamaz. 
+NOT: Genel oda ayarlarını kendinize göre düzenleyin, boş bırakmamanız önerilir. 
+Kod dosyanızın adını "main.js" olarak adlandırın ve proje dizininde bir "maps" klasörü oluşturun.
 
-Kullanıcı, bu yazılımı kullanarak tüm sorumluluğu kabul eder ve geliştiricileri 
-her türlü yasal ve mali yükümlülükten muaf tutar.
-
-Bu proje açık kaynaklı olup, kullanımı tamamen bireysel sorumluluk altındadır. 
-Hukuki veya etik sorunlar ile ilgili tüm sorumluluk kullanıcıya aittir.
-
----
-
-ENGLİSH
-
-This software is provided "as is" and does not come with any warranty.
-The developers cannot be held responsible for any direct or indirect damages, data loss, service interruptions, or third-party actions resulting from the use of this software.
-
-By using this software, the user accepts all responsibility and releases the developers from any legal or financial liabilities.
-
-This project is open-source, and its use is completely at the user's own risk.
-All legal or ethical issues are the responsibility of the user.
-
-
-████████████████████████████████████████████████████████████████████████
+Bu klasörün içerisine aşağıdaki harita dosyalarını ekleyin:
+- "training.hbs": Antrenman haritası
+- "classic.hbs": 1v1 ve 2v2 maçları için ortak harita
+- "big.hbs": 3v3 maçları için harita
 */
 
+// ████████████████████████████████████████████████████████████████████████████████████████████
 
-
-const DİSCORD_BOT_TOKEN = "" /* Discord bot tokeni oluşturun 
-UYARI:
-- Botunuza Discordda verdiğiniz rol, rol listesinde en yukarda olmalıdır. Tüm yetkiler verilmelidir.
-- Privileged Gateway Intents ayarlarının hepsi açılmalıdır.
-- Bot davet edilirken - OAuth2 kullanarak - scopes ayarlarından application.commands ve bot seçilmelidir ve Admin yetkisi verilmelidir.
-
+/*
+Bu bölümde kullanılan kütüphaneler açıklanmıştır:
+- "haxball.js": Node.js üzerinden oda başlatmamıza olanak tanıyan npm modülü.
+- "node-localstorage": Tarayıcıdaki localStorage'ı daha gelişmiş bir şekilde yerel bir depolama alanı olarak kullanmamızı sağlar.
+- "fs" ve "path": "maps" klasöründen haritaları çekerken kullanılmıştır.
 */
 
-/*  NOT: öncelikle genel oda ayarlarını kendinize göre ayarlayın boş bırakmamanız tavsiye edilir.
-    Kodunuzun adını main.js olarak adlandırın ve aynı yere bir maps klasörü oluşturun
-    Bu klasöre;
-    training.hbs => antrenman mapi
-    classic.hbs => 1v1 ve 2v2 mapi ORTAKTIR!
-    big.hbs => 3v3 mapi 
-    ekleyin.
-
-*/
-/*████████████████████████ GENEL AYARLAR ████████████████████████*/
-/* Bu kısımda kullanacağım kütüphaneler yer alıyor.
- - haxball.js => node.js üzerinden oda başlatmamıza imkan tanıyan npm modülü
- - node-localstorage => Tarayıcıdaki localStorage i daha gelişmiş olarak yerel bir depolama alanı olarak kullanmamızı sağlıyor.
- - fs ve path maps klasöründen mapleri çekerken kullandım sadece çok önemli değil kodun temiz kalması için ekledim
-*/
 const HaxballJS = require('haxball.js');
 const { LocalStorage } = require('node-localstorage');
 const { Client, GatewayIntentBits, SlashCommandBuilder,EmbedBuilder } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
-const LocalStatsStorage = new LocalStorage('./Stats'); // Oyuncu İstatistikleri oyuncu adı anahtar olarak kullanarak depolanıyor.
-const LocalProfilesStorage = new LocalStorage('./Profiles'); // Haxball hesaplarının şifreleri, authlar, connlar... depolanıyor
-const LocalListsStorage = new LocalStorage('./Lists'); // admin listesi, ban listesi ... depolanıyor
-const LocalDiscordProfilesStorage = new LocalStorage('./DiscordProfiles'); // discord haxball hesap eşleştirmeleri depolanıyor
 
-/*████████████████████████ GENEL ODA AYARLARI ████████████████████████*/
+// ████████████████████████████████████████████████████████████████████████████████████████████
+
+/*
+Yerel depolama yapılandırmaları:
+1️⃣ "LocalStatsStorage" => './Stats': 
+   - Oyuncu istatistikleri depolanır (anahtar olarak oyuncu adı kullanılır).
+   
+2️⃣ "LocalProfilesStorage" => './Profiles': 
+   - Haxball hesap bilgileri depolanır (şifreler, authlar, conn bilgiler vb.).
+
+3️⃣ "LocalListsStorage" => './Lists': 
+   - Yönetim listeleri ve bazı ek listeler depolanır (admin listesi, ban listesi vb.).
+
+4️⃣ "LocalDiscordProfilesStorage" => './DiscordProfiles': 
+   - Discord ve Haxball hesap eşleştirmeleri depolanır.
+*/
+
+const LocalStatsStorage = new LocalStorage('./Stats'); 
+const LocalProfilesStorage = new LocalStorage('./Profiles');
+const LocalListsStorage = new LocalStorage('./Lists'); 
+const LocalDiscordProfilesStorage = new LocalStorage('./DiscordProfiles'); 
+
+// ████████████████████████████████████████████████████████████████████████████████████████████
 console.clear()
-var callWebhook = ''; // Admin çağrılarının gideceği webhook, özel bir kanal yapmalısınız.
-const roleMentions = "<@&1029434387794774485> <@&1029443499776012457>"; // Buraya çağrı sırasında etiketlenecek admin rollerinin ID lerini ekleyin
-// Verilen rol ID leri örnektir eğer o kanala erişimi olan herkesin görmesini istiyorsanız @everyone da ekleyebilirsiniz.
-var gameWebhook = '';  // Maç kayıtlarının gideceği webhook, herkese açık bir kanal olmalı
-var banWebhook = ''; // Ban işlemlerinin gideceği webhook.
 
-// PEKİ WEBHOOK NASIL OLUŞTURURUM? => https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks
+/* 🔗 Webhook Ayarları 
+Webhook Nasıl Oluşturulur? => https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks    */
+var callWebhook = ''; // Admin destek çağrısı iletilecektir.
+var gameWebhook = '';  // Oyun kayıtları iletilecektir.
+var banWebhook = ''; // Ban işlem kayıtları iletilecektir.
+var roomWebhook = ''; // Oda kayıtları(odaya katılma, ayrılma, gönderilen mesajlar...) iletilecektir.
 
-const ADMIN_ROLE_ID = '1329444499726012457';  // Discord admin komutlarına erişimi olan rolün ID si
+/* 🎭 Discord Ayarları */
+var discordLink = "" // Eğer varsa Discord sunucunuzun bağlantısı
+const roleMentions = "<@&ROLE_ID> <@&ROLE_ID>"; // Admin çağrısında etiketlenecek roller
+const ADMIN_ROLE_ID = 'ROLE_ID'; // Discord üzerindeki admin komutlarını kullanabilmek için gerek rol
 
-// Odanın Konum Bilgileri
-// Tüm odaların konumunu görebileceğiniz API => https://api.sefinek.net/api/v2/haxball/room-list
+/* 🌍 Oda Konum Bilgileri 
+NOT: Tüm odaların konumunu görebileceğiniz API => https://api.sefinek.net/api/v2/haxball/room-list */
 const LAT = 40.200005
 const LON = 29
 
-var drawTimeLimit = 10; // 10 dakika sonunda eğer skorlar eşitse beraberlik ilan edilir.
-var defaultSlowMode = 3; // yavaş mod herkes için geçerli
+/* ⚙️ Oda Genel Ayarları */
+const roomName = ''; // Odanızın adı
+const maxPlayers = 10; // Odanızda maksimum kaç oyuncu bulunabilir?
 
-var minAFKDuration = 0; // min afk kalma süresi
-var maxAFKDuration = 10; // max afk kalma süresi sonra kick
-var AFKCooldown = 0; // afk komutu kaç saniyede bir kullanılabilir
+/* 🔒 Güvenlik ve Hesap Ayarları */
+var masterPassword = 14587654 // Yönetici şifreniz. "!yöneticikodum masterPassword" kullanarak kalıcı Yönetici listesine eklenirsiniz.
+var passwordLengths = { min: 4, max: 8 };  // Hesap şifresi için min ve max karakter aralığı
+var loginTimeout = 20;   // Giriş yapması için oyuncuya verilen süre
 
-const maxPlayers = 10; // Max oyuncu sayısı
-var discordLink = "" // Discord linkiniz
-const roomName = ''; // Oda adı
-var roomWebhook = ''; // Oda kayıtlarının (odaya katılma ayrılma chat...) iletildiği log webhooku, özel kanal olmalı
-var roomLink = null
-const token = "" // => https://www.haxball.com/headlesstoken 
+/* 🚨 AFK Ayarları */
+var minAFKDuration = 0; // Min AFK kalma süresi
+var maxAFKDuration = 10; // Max AFK kalma süresi
+var AFKCooldown = 0; // "!afk" komutu kaç dakikada bir kullanılabilir
 
-var masterPassword = 17845 // Yönetici kodudur. Odaya girince !yöneticikodum kod yazarak kalıcı yetki alırsınız. Sınırsız yekti!
+/* ⏱️ Oyun Ayarları */
+var teamSize = 3 // Tavsiyem 3 olarak kalmasıdır fakat bigMap yeterince büyük seçilirse 4 olarakda ayarlanabilir. 4 üzeri tavsiye edilmez!
+var drawTimeLimit = 10; // Kaç dakika sonra beraberlik ilan edilsin?
+var defaultSlowMode = 3; // İki mesaj arasında en az kaç saniye beklenilmeli.
 
-var debugMode = false; // Odadanız test modundaysa true yapın bu AFK kick vb. şeyleri kapatacaktır. Ayrıca public: false olarak ayarlayacaktır.
-
-var teamSize = 3 // Maksimum takım kapasitesi (Önerim 3 olarak kalmasıdır fakat isterseniz 4 yapabilirsiniz)
-// Burada unutmamanız gereken şey antrenmanda training map 1v1 ve 2v2 de classic 3v3 de ise big map açılır eğer teamsize ı 
-// 3 den büyük yaparsanız yine de bigmap olarak kalacaktır yani 3 kişilik map ile 4 kişilik map aynı map olacaktır.
-
-const PROXY = null  // Proxy kullanarak birden fazla oda açabilirsiniz.
-
-/* Proxy aşağıdaki formatta olmalıdır.
-
-"http://IP:PORT"
-                    Örnek: "http://1.1.1.1:80"
-
-*/
-
-
-// YAPILACAK DUYURULARIN LİSTESİ SIRASIYLA YAPILIR HER ODA AÇILDIĞINDA
-
+/* 📢 Duyuru Listesi */
 const announcementList = [
-    `Admin başvuruları açılmıştır.Discord adresimizden başvurabilirsiniz. 
-${discordLink}`,
-    `Turnuvalar, çekilişler ve daha fazlası için Discord sunucumuza katılın! 
-${discordLink}`,
+    `Duyuru 1`,
+    `Duyuru 2`,
 
 ];
 
+/* 🌐 Proxy Ayarı */
+// Haxball IP başına 2 oda sınırı koyuyor. Fakat proxy kullanarak ikiden fazla oda açabilirsiniz. 
+// 📋 Örnek: "http://1.1.1.1:80"
+// null ise proxy kullanılmaz
+const PROXY = null
+
+/* 🛠️ Debug Modu */
+// Eğer odanız henüz kurulum aşamasındaysa true yapın. AFK olan oyuncuyu atma, IP başına oyuncu sınırlandırılması gibi kontroller devre dışı kalır ve oda private olarak ayarlanır.
+var debugMode = false;
 
 
+// ████████████████████████████████████████████████████████████████████████████████████████████
 
-var passwordLengths = { min: 4, max: 8 }; // Şifre için min max uzunluk
-var loginTimeout = 20; // Kaç saniye içerisinde giriş yapılmazsa atılsın ? -- kayıtsızlar atılmaz sadece stat kaydedilmez
-
-/*████████████████████████ DİSCORD BOTU ████████████████████████*/
 const client = new Client({ 	
     intents: [
     GatewayIntentBits.Guilds,
@@ -167,16 +137,16 @@ const client = new Client({
 ], });
 
 
-/*████████████████████████ HAXBALL BOTU ████████████████████████*/
+// ████████████████████████████████████████████████████████████████████████████████████████████
 
-var password = null
 
 HaxballJS.then((HBInit) => {
 
-
+var roomLink = null
 var fetchRecordingVariable = true;
 var timeLimit = 3;
 var scoreLimit = 3;
+var password = null
 
 var gameConfig = {
     roomName: roomName,
@@ -188,8 +158,9 @@ var gameConfig = {
     proxy: PROXY,
     token: token
 }
+
 const room = HBInit(gameConfig);
-client.room = room // discord ile etkileşime geçmek için kullanılacak nesne
+client.room = room 
 
 const mapsDir = path.join(__dirname, 'maps');
 const trainingMap = fs.readFileSync(path.join(mapsDir, 'training.hbs'), 'utf8');
@@ -203,8 +174,6 @@ room.setTeamsLock(true);
 room.setKickRateLimit(6, 0, 0);
 
 var roomPassword = '';
-
-/* OPTIONS */
 
 var maxAdmins = 0;
 var disableBans = false;
@@ -513,12 +482,12 @@ var streak = 0;
 
 var authArray = [];
 var adminList = [
-    ['cDz3jGFWtU8OvYpHt34GS-bbVhAVq1Hfajk8jHqxfm8', 'dc: kgn.official'],
+    ['cDz3jGFWtU8O****fajk8jHqxfm8', 'kgn-h'],
     // ['INSERT_AUTH_HERE', 'NICK_OF_ADMIN'],
     // ['INSERT_AUTH_HERE', 'NICK_OF_ADMIN'],
 ];
 var masterList = [
-    'cDz3jGFWtU8OvYpHt34GS-bbVhAVq1Hfajk8jHqxfm8', // örnek auth verilmiştir.
+    'cDz3jGFWtU8OvY****AVq1Hfajk8jHqxfm8', // örnek auth verilmiştir.
     // 'INSERT_MASTER_AUTH_HERE'
     // 'INSERT_MASTER_AUTH_HERE'
     // 'INSERT_MASTER_AUTH_HERE'
@@ -4205,7 +4174,9 @@ room.onGameTick = function () {
 });
 
 
-/*████████████████████████ BOT KOMUTLARI ████████████████████████*/
+// ████████████████████████████████████████████████████████████████████████████████████████████
+
+
 client.once('ready', () => {
     console.log('Bot hazır!');
     client.application.commands.set([
@@ -4277,6 +4248,8 @@ client.once('ready', () => {
 
 
 });
+
+// ████████████████████████████████████████████████████████████████████████████████████████████
 
 client.on('interactionCreate', async (interaction) => {
     if (interaction.isCommand()) {
@@ -4636,5 +4609,8 @@ Rütbe: ${rankTitle}
 
 });
 
+// ████████████████████████████████████████████████████████████████████████████████████████████
 
 client.login(DİSCORD_BOT_TOKEN);
+
+// ████████████████████████████████████████████████████████████████████████████████████████████
